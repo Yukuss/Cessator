@@ -2,8 +2,7 @@
 
 <img src="screenshots/logo.png" width="96" alt="Cessator" />
 
-[![English](https://img.shields.io/badge/README-English-2ea44f)](README.md)
-[![Русский](https://img.shields.io/badge/README-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-e0a832)](README_RU.md)
+**[English](README.md)** · **[Русский](README_RU.md)**
 # Cessator
 
 **Honest time statistics for your PC.**
