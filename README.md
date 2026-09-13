@@ -2,179 +2,186 @@
 
 <img src="screenshots/logo.png" width="96" alt="Cessator" />
 
+[![English](https://img.shields.io/badge/README-English-2ea44f)](README.md)
+[![Русский](https://img.shields.io/badge/README-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-e0a832)](README_RU.md)
 # Cessator
 
-**Честная статистика времени на вашем ПК.**
+**Honest time statistics for your PC.**
 
-*Cessator (лат.) — «бездельник»*
+*Cessator (Latin) - "one who has ceased", an idler at rest*
 
-Сколько времени какие приложения открыты, находятся в фокусе и играют звук.
-Плюс живой мониторинг друзей в Steam и послематчевая аналитика Dota 2.
-Можно чекать активность даже по вкладкам браузера, а не только по открыт/закрыт ли браузер
+How long each app stays open, in focus, and playing sound.
+Plus live Steam friends monitoring and post-match Dota 2 analytics.
+Even tracks activity per browser tab, not just whether the browser is open or closed.
 
-PS Код не заливаю не потому что жадный, а просто не хочу случайно личную инфу залить)
+PS The code stays private not because I'm greedy - I just don't want to accidentally leak personal info)
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows11&logoColor=white)
-![Локально](https://img.shields.io/badge/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-100%25%20%D0%BD%D0%B0%20%D0%92%D0%B0%D1%88%D0%B5%D0%BC%20%D0%9F%D0%9A-2ea44f)
-![Без облака](https://img.shields.io/badge/%D0%B1%D0%B5%D0%B7-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0%20%D0%B8%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%BE%D0%B2-e0a832)
+![Local data](https://img.shields.io/badge/data-100%25%20on%20your%20PC-2ea44f)
+![No cloud](https://img.shields.io/badge/no-cloud%20or%20accounts-e0a832)
 
 </div>
 
 ---
 
-![Дашборд Cessator - обзор дня](screenshots/demo-overview.png)
+![Cessator dashboard - day overview](screenshots/demo-overview.png)
 
-<sub>Обзор дня: фокус по приложениям, кольцо категорий и разбивка браузера по сайтам - без единого расширения.</sub>
+<sub>Day overview: focus per app, category ring, and the browser split by site - no extension required.</sub>
 
-## Возможности
+## Features
 
-### Трекер времени
+### Time tracker
 
-- **Фокус и фон** - считайте время только по активному окну или по всем
-  открытым сразу. Периоды: сегодня, 12ч, 24ч, 7 дней или свой диапазон
-  с календарём и подсветкой дней активности.
-- **Вкладки браузера - без расширения.** Адресная строка фокусируемого
-  окна читается через Windows UI Automation: браузер разворачивается по
-  сайтам (youtube.com, github.com, …). Работает в Chrome, Edge, Brave,
-  Vivaldi и Firefox.
-- **Лента дня** - вся суточная шкала на одном экране: полосы приложений,
-  слои фокуса и звука, периоды «отошёл», отметки запуска трекера.
-- **Игра идёт прямо сейчас** - локальный детект запущенной игры с живым
-  таймером: карточка появляется через ~5 секунд после запуска.
-- **«Отошёл / вернулся»** по простою ввода; звук в фокусе отменяет away.
+- **Focus and background** - count time for the active window only, or for
+  everything that is open. Periods: today, 12h, 24h, 7 days, or a custom
+  range with a calendar and activity highlighting.
+- **Browser tabs - no extension.** The address bar of the focused window
+  is read via Windows UI Automation: the browser expands into sites
+  (youtube.com, github.com, ...). Works in Chrome, Edge, Brave, Vivaldi
+  and Firefox.
+- **Day timeline** - the whole day on one screen: app lanes, focus and
+  sound layers, away periods, tracker start marks.
+- **A game is running right now** - local detection of a running game
+  with a live timer: the card appears ~5 seconds after launch.
+- **"Away / back"** by input idle; sound while focused cancels away.
 
-![Лента дня](screenshots/demo-timeline.png)
+![Day timeline](screenshots/demo-timeline.png)
 
-<sub>Лента дня: зум колесом мыши, перетаскивание - прокрутка, короткие фокусы скрываются порогом.</sub>
+<sub>Day timeline: wheel to zoom, drag to pan, short focuses hidden by a threshold.</sub>
 
-### Каталог
+### Catalog
 
-- **Свои имена** приложениям - «code.exe» превращается в «Visual Studio Code».
-- **Категории и скрытие** для приложений и отдельных сайтов: правило,
-  переопределение из дашборда или скрыть совсем - данные остаются.
-- У браузеров каталог раскрывается по вкладкам: категория и удаление
-  данных для каждого сайта отдельно.
+- **Custom names** for apps - "code.exe" becomes "Visual Studio Code".
+- **Categories and hiding** for apps and individual sites: a rule, an
+  override from the dashboard, or hide completely - the data stays.
+- Browsers expand by tabs: a category and data removal for each site
+  separately.
 
-![Каталог приложений и сайтов](screenshots/demo-catalog.png)
+![App and site catalog](screenshots/demo-catalog.png)
 
-<sub>Каталог: Google Chrome раскрыт по сайтам - у каждого своя категория и видимость.</sub>
+<sub>Catalog: Google Chrome expanded by sites - each with its own category and visibility.</sub>
 
 ### Steam
 
-- **Сейчас играет, библиотека, друзья онлайн и в игре** - метрики на
-  одном экране.
-- **Сессии друзей за день** - по строке на друга, полосы по каждой игре,
-  тултипы «игра · время · длительность», выбор дня календарём.
-- **Свои имена друзьям** (✎) и **скрытие** (✕): переименованный друг
-  показывается везде вместо ника, скрытый - не отслеживается и не мешает.
-- Выключатель «отслеживать друзей» - полностью останавливает опрос.
+- **Playing now, library, friends online and in-game** - all metrics on
+  one screen.
+- **Friend sessions per day** - a row per friend, lanes per game,
+  "game · time · duration" tooltips, pick a day with the calendar.
+- **Custom names for friends** and **hiding**: a renamed friend shows
+  everywhere instead of the nickname; a hidden one is not polled and
+  never gets in the way.
+- A "track friends" switch - stops polling entirely.
 
 ### Dota 2
 
-- **Список матчей** как сводка периода: W/L, полоса винрейта, средний
-  KDA, самый частый герой, теплокарта 12 недель.
-- **Обзор матча** - карточка «я», скорборд двух команд с позициями,
-  KDA, уроном и нетворсом, предметы, драфт, бенчмарки против ранга.
-- **Таймлайн матча** - объекты, бои и покупки на одной шкале с зумом
-  выделением и синхронным плеихедом.
-- **Источники**: OpenDota (без ключа) и STRATZ PRO-слой (бесплатный
-  персональный токен) - IMP, вероятность победы по минутам, золото по
-  источникам, CS@10/20.
+- **Match list** as a period summary: W/L, winrate bar, average KDA,
+  most played hero, a 12-week heatmap.
+- **Match overview** - your card, both teams' scoreboard with positions,
+  KDA, damage and networth, items, draft, benchmarks against the rank.
+- **Match timeline** - objectives, fights and purchases on one scale
+  with zoom-by-selection and a synced playhead.
+- **Sources**: OpenDota (no key) and the STRATZ PRO layer (a free
+  personal token) - IMP, win probability by minute, gold sources,
+  CS@10/20.
 
-### Настройки
+### Settings
 
-- 4 стиля интерфейса (Classic / Playful / Terminal / Player) × тёмная и
-  светлая темы, цвета категорий, вид навигации и вкладок.
-- Язык **EN / RU**, граница дня (ночные сессии уходят во вчерашний день).
-- **Автозапуск при входе в Windows** - переключатель здесь и галочка
-  в меню трея, состояние синхронизировано.
-- **Красивый адрес** `cessator.local` без порта в адресе.
-- **Доступ с телефона** по Wi-Fi - дашборд открывается с телефона в той
-  же сети.
-- Баннер обновлений: источник уже вшит (GitHub проекта) - при выходе
-  новой версии появится ссылка на скачивание; можно указать свой
-  репозиторий или `latest.json`. Текущая версия - в шапке дашборда.
-- Полное удаление программы в два клика, с опцией стереть данные.
+- 4 interface styles (Classic / Playful / Terminal / Player) × dark and
+  light themes, category colors, navigation and tab styles.
+- **EN / RU** language, day boundary (night sessions go to yesterday).
+- **Autostart with Windows** - a switch here and a checkbox in the tray
+  menu, always in sync.
+- **Friendly address** `cessator.local` with no port in the URL.
+- **Phone access** over Wi-Fi - the dashboard opens from a phone on the
+  same network.
+- Update banner: the source is baked in (the project's GitHub) - when a
+  new version is out, a download link appears; you can point it at your
+  own repo or a `latest.json`. The current version is in the dashboard
+  header.
+- Full uninstall in two clicks, with an option to wipe the data.
 
-![Настройки Cessator](screenshots/demo-settings.png)
+![Cessator settings](screenshots/demo-settings.png)
 
-<sub>Настройки: автозапуск, красивый адрес, доступ с телефона и граница дня.</sub>
+<sub>Settings: autostart, friendly address, phone access and the day boundary.</sub>
 
-## Приватность
+## Privacy
 
-- **Без облака, без аккаунтов, без телеметрии.** Дашборд - это локальный
-  сервер на вашем ПК.
-- Вся статистика - в локальной SQLite-базе в выбранной вами папке.
-- Ключи Steam / STRATZ хранятся только в локальном конфиге и никогда
-  не попадают в браузер.
-- Доступ по сети выключен по умолчанию и включается явно.
+- **No cloud, no accounts, no telemetry.** The dashboard is a local
+  server on your PC.
+- All statistics live in a local SQLite database in a folder you choose.
+- Steam / STRATZ keys are stored only in the local config and never
+  reach the browser.
+- Network access is off by default and enabled explicitly.
 
-## Установка
+## Install
 
-1. Скачайте `Cessator.exe` из [Releases](../../releases) — портативный файл,
-   без установщика: положите куда удобно и запустите.
-2. При первом запуске программа спросит папку для локальной базы
-   (по умолчанию — `%LOCALAPPDATA%\Cessator`).
-3. Дашборд откроется сам на `http://127.0.0.1:8777`, значок появится в трее.
-4. Хотите адрес без порта — включите «Красивый адрес (cessator.local)»
-   в Настройках: Windows один раз спросит подтверждение администратора.
+1. Download `Cessator.exe` from [Releases](../../releases) - a portable
+   file, no installer: put it anywhere and run it.
+2. On first launch the app asks for a folder for the local database
+   (default: `%LOCALAPPDATA%\Cessator`).
+3. The dashboard opens at `http://127.0.0.1:8777`, the tray icon appears.
+4. Want an address without a port? Enable "Friendly address
+   (cessator.local)" in Settings: Windows asks for one admin
+   confirmation.
 
-Windows может предупредить о неизвестном издателе (exe не подписан) —
-«Подробнее → Выполнить в любом случае».
+Windows may warn about an unknown publisher (the exe is unsigned) -
+"More info → Run anyway".
 
-Обновление - скачайте новый `Cessator.exe` и замените старый файл:
-данные, ключи и настройки живут отдельно от программы и не затираются.
-Прежние версии ChronoTrack подхватывают всё сами - статистика, ключи
-и автозапуск переезжают автоматически.
+Updating - download the new `Cessator.exe` and replace the old file:
+data, keys and settings live separately from the program and are never
+touched. Previous ChronoTrack installs pick everything up themselves -
+statistics, keys and autostart migrate automatically.
 
-## Как это работает
+## How it works
 
-Каждые ~5 секунд снимается срез видимых окон верхнего уровня (как в
-Alt-Tab), флаг звука по процессу и глобальный простой ввода. При смене
-состояния окна строка в базе закрывается и открывается новая. Steam-друзья
-опрашиваются раз в 90 секунд, Dota-матчи подтягиваются из OpenDota/STRATZ
-после окончания партии.
+Every ~5 seconds a snapshot of top-level visible windows is taken (like
+Alt-Tab), plus a per-process sound flag and the global input idle. When
+a window's state changes, the row in the database is closed and a new
+one opens. Steam friends are polled every 90 seconds; Dota matches are
+pulled from OpenDota/STRATZ after a game ends.
 
-Программа сидит в трее: открыть дашборд, пауза сбора, автозапуск, выход.
+The app sits in the tray: open dashboard, pause tracking, autostart,
+quit.
 
-## Нагрузка на систему
+## System load
 
-Трекер спроектирован так, чтобы быть незаметным: один процесс в трее,
-опрос окон раз в 5 секунд и крошечные записи в локальную SQLite-базу.
-Веб-дашборд работает по запросу - пока вкладка закрыта, он ничего не делает.
+The tracker is designed to be invisible: one tray process, a window
+snapshot every 5 seconds, and tiny writes to a local SQLite database.
+The web dashboard works on demand - while the tab is closed, it does
+nothing.
 
-Замер на обычном домашнем ПК (12 потоков, живая база за 5 дней):
+Measured on a regular home PC (12 threads, a live 5-day database):
 
-![Нагрузка на систему](screenshots/system-load.png)
+![System load](screenshots/system-load.png)
 
-<sub>Замер: метрики процесса, сравнение CPU с фоновым табом Chrome и рост базы на диске.</sub>
+<sub>Measurement: process metrics, CPU compared to a background Chrome tab, and database growth on disk.</sub>
 
-| Метрика | Значение |
+| Metric | Value |
 |---|---|
-| CPU | **0,03%** системы (0,4% одного ядра) |
-| RAM | **~57 МБ** на оба процесса |
-| Диск (I/O) | **≈0** в покое - запись только при смене окна |
-| Один цикл опроса | **~18 мс** раз в 5 секунд |
-| Сеть в покое | ≈0 - порт 8777 просто слушает |
+| CPU | **0.03%** of the system (0.4% of one core) |
+| RAM | **~57 MB** for both processes |
+| Disk (I/O) | **~0** at idle - writes only when a window changes |
+| One poll cycle | **~18 ms** every 5 seconds |
+| Network at idle | ~0 - port 8777 just listening |
 
-Для сравнения: один фоновый таб Chrome с активным JS занимает ~1,5% ядра -
-в несколько раз больше, чем весь Cessator.
+For comparison: one background Chrome tab with active JS takes ~1.5% of
+a core - several times more than all of Cessator.
 
-Рост базы данных - по живым данным (~6 700 записей в день; строка
-открывается только при смене состояния окна, а не на каждом опросе):
+Database growth - from live data (~6,700 rows per day; a row opens only
+when a window's state changes, not on every poll):
 
-| Период | База статистики |
+| Period | Statistics DB |
 |---|---|
-| Неделя | ~6 МБ |
-| Месяц | ~27 МБ |
-| Год | ~330 МБ |
+| Week | ~6 MB |
+| Month | ~27 MB |
+| Year | ~330 MB |
 
-Кэши Steam / Dota / STRATZ добавляют единицы мегабайт.
+Steam / Dota / STRATZ caches add a few megabytes.
 
 ---
 
 <div align="center">
 
-**Cessator** — время говорит само за себя.
+**Cessator** - time speaks for itself.
 
 </div>

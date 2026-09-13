@@ -3,5 +3,6 @@
 # Хотите опубликовать код — уберите белый список ниже.
 /*
 !/README.md
+!/README_RU.md
 !/screenshots/
 !/.gitignore
